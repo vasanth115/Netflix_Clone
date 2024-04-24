@@ -1,0 +1,116 @@
+{
+    "series" :[
+        {
+            "id":1,
+            "name" : "Naruto season 1",
+            "year" : "2002",
+            "episodesNO" : "5",
+            "posterURL" : "https://i.imgur.com/hvz5XwT.jpeg",
+            "episodes":[
+                {
+                    "episodeName":"Enter: Naruto Uzumaki!",
+                    "plot":"Story of naruto Starts",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"My Name is Konohamaru",
+                    "plot":"third hokage grandchlid",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Sasuke and Sakura: Friends or Foes?",
+                    "plot":"Sasuke to Sakura",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Pass or Fail: Survival Test",
+                    "plot":"Acadamy final test",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"You Failed! Kakashi's Final Decision",
+                    "plot":"kakachi final destination",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                }
+            ]
+        },
+        {
+            "id":2,
+            "name" : "Naruto season 2",
+            "year" : "2003",
+            "episodesNO" : "6",
+            "posterURL" : "https://i.imgur.com/eBioeTT.jpeg",
+            "episodes":[
+                {
+                    "episodeName":"Enter Pain Arc",
+                    "plot":"Akachuki leader Pain",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Six Path Pain",
+                    "plot":"Gods of rain Village",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Naruto Sage Mode Training",
+                    "plot":"Jiraya dead and Sage Mode Mastering",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Pain Entered Leaf",
+                    "plot":"Pain Entered leaf to capture NineTails",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Pain VS Kakashi",
+                    "plot":"Kakachi dead ",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Pain VS Naruto",
+                    "plot":"naruto Hero of the leaf",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                }
+            ]
+        },
+        {
+            "id":3,
+            "name" : "Naruto season 3",
+            "year" : "2005",
+            "episodesNO" : "6",
+            "posterURL" : "https://i.imgur.com/0ZA5VEo.jpeg",
+            "episodes":[
+                {
+                    "episodeName":"4Th great ninja War Begins",
+                    "plot":"Obito declares War on Allied Shinobi Forces",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Tobi to Obito",
+                    "plot":"Joker to Villan",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Kurama Mode",
+                    "plot":"Naruto Mastered NineTails Power",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Obito and Madara",
+                    "plot":"2 Uchika's Vs 80000 shinobies",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"Infinit Tsukuyomi",
+                    "plot":"All UNder the Control Of gen jutsu",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                },
+                {
+                    "episodeName":"War Ends",
+                    "plot":"Naruto and Sasuke Save the World",
+                    "vedio":"https://i.imgur.com/DU0LFYg.mp4"
+                }
+            ]
+        }
+    ]
+}

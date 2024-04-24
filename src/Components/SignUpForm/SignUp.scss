@@ -1,0 +1,87 @@
+.register__form{
+    background-color: #fff;
+    height: 125vh;
+    
+    & .register__container{
+        display: flex;
+        margin: 0 58px;
+        justify-content: space-between;
+        align-items:center ;
+        height: 100px;
+
+        & .register__btn{
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+
+        & .register__image{
+            height: 36px;
+            width: 134px;
+            margin-right: 40px;
+        }
+    }
+
+    & .register__content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        & .form_register{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin-top: 50px;
+
+            & .register__text{
+                font-size: 18px;
+                color: #000;
+                margin: 13px 0px;
+            }
+
+            & .register__input{
+                padding: 15px;
+                margin-bottom: 14px;
+            }
+
+            & .register__button{
+                padding: 15px;
+                background: red;
+                color: #fff;
+                border: 0;
+                font-size: 24px;
+                border-radius: 5px;
+            }
+
+            & .register__forgetpassword{
+                text-decoration: none;
+                color: rgb(12, 156, 213);
+                font-size: 18px;
+                margin-bottom: 13px;
+            }
+        }
+    }
+}
+
+.register__input--invalid{
+    border-color: red;
+}
+
+@media (max-width:1000px){
+     .register__image{
+        height: 36px;
+        width: 94px !important;
+        margin-right: 40px;
+    }
+    .register__text{
+        font-size: 15px;
+        color: #000;
+        margin: 13px 0px;
+    }
+    .form_register{
+        margin: 0 10px;
+    }
+}

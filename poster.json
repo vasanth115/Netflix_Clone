@@ -1,0 +1,40 @@
+{
+    "movies": [
+        {
+            "id":1,
+            "title" : "The Elephant Whisperers",
+            "IMDb" : "7.5/10",
+            "posterUrl":"https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABW9mSWPEJp91k2hVwTVIjP8To489ce9khb3XtHCD7GFsvFX0x5AGYFsAlQAIMhFuivusSZNhk1pBdIr-muqKQK6xi6WbnXuqWykS.jpg?r=e78" 
+        },
+        {
+            "id":2,
+            "title": "Beast",
+            "IMDb":"5.3/10",
+            "posterUrl":"https://m.economictimes.com/thumb/msid-90961355,width-1200,height-900,resizemode-4,imgsize-61014/beast-poster.jpg"
+        },
+        {
+            "id":3,
+            "title":"Baahubali: The Beginning",
+            "IMDb":"8/10",
+            "posterUrl":"https://play-lh.googleusercontent.com/proxy/7HmkIYyPhpS3ILgO7n_ej_i8rBW4X-oBi9JCFvc9x6wtskCRJ3vexdZjkixhHwSx789Hmg8FKKAYmaQArACqD9XVMhRIEREwqmyDb9p9GGzlS1Uq3kEctGWpig=s1920-w1920-h1080"
+        },
+        {
+            "id":4,
+            "title":"Baahubali 2: The Conclusion",
+            "IMDb":"8.4/10",
+            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc3G1TFNYwmqalBWoPxLYjh0M5YJt8WXcvAg&s"
+        },
+        {
+            "id":5,
+            "title":"Doctor",
+            "IMDb":"8.0/10",
+            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBURBZtJGW8ScbqlICXhUWuxBveenqsTgxA&s"
+        },
+        {
+            "id":6,
+            "title":"Mersal",
+            "IMDb":"9.3/10",
+            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzUaQEIVQm-gAHHgg-BEmCnGi8fWNE9tllg&s"
+        }
+    ]
+}

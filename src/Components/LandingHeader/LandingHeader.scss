@@ -1,0 +1,49 @@
+.Landing__Header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    padding: 20px 0;
+
+    & .Landing__Header__image{
+        width: 20%;
+        & img{
+            height: 36px;
+            width: 134px;
+            margin-left: 50px;
+        }
+    }
+
+    & .navbar{
+        width: 60%;
+
+        & nav ul{
+            display: flex;
+
+            & li{
+                padding-right: 60px;
+                list-style-type: none;
+
+                & a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    & .Landing__Header__search{
+        width: 20%;
+        display: flex;
+        justify-content:flex-end ;
+        margin-right: 30px;
+
+        & .search__icon{
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.payment{
+    background-color: #fff;
+    height: auto;
+
+    & .payment__container{
+        display: flex;
+        margin: 0 58px;
+        justify-content: space-between;
+        align-items:center ;
+        height: 100px;
+
+        & .payment__image{
+            height: 66px;
+            width: 134px;
+            margin-right: 40px;
+        }
+
+        & .payment__btn{
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    & .payment__text{
+        display: flex;
+        flex-direction: column;
+        margin: 25px 0px 25px 30px;
+    }
+
+    & .payment__select{
+        display: grid;
+        grid-template-columns: repeat(auto-fit ,minmax(300px ,auto));
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 25px;
+
+        & .active{
+            border: 1px solid #000 !important;
+            transform: translateY(-10px);
+
+            & .item__image{
+                display: flex !important;
+            }
+        }
+
+        & .payment__select__item{
+            height: 600px;
+            border: 1px solid grey;
+            border-radius: 13px;
+            display: flex;
+            flex-direction: column;
+            transition: 1s;
+            align-items: center;
+
+            & .Premium{
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);;
+            }
+
+            & .Standard {
+                background:radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+            }
+
+            & .Basic{
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+            }
+
+            & .Mobile{
+                background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+            }
+            & .payment__title{
+                height: 100px;
+                width: 290px;
+                border: 0;
+                margin-top: 0.4rem;
+                border-radius: 10px;
+                color: #fff;
+
+                & .item__image{
+                    display: none;
+                    justify-content: flex-end;
+                    margin: 0 15px 30px 0px;
+                    
+                & img{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    background-color:#fff;
+                }
+                }
+
+                & h3{
+                    margin: 13px 0 10px 15px;
+                    color: #fff;
+                }
+
+                & h4{
+                    margin-left: 15px;
+                }
+            }
+
+            & .payment__details{
+                border-bottom: 1px solid grey;
+                margin: 15px 15px 5px 15px;
+                width: 250px;
+
+               & h2{
+                    font-size: 0.8125rem;
+                    font-weight: 500;
+                    line-height: 1.53846;
+                    color: rgb(118, 118, 118);
+                }
+
+                & h3{
+                    font-size: 1rem;
+                    font-weight: 550;
+                    line-height: 1.5;
+                    color: rgba(0, 0, 0, 0.7);
+                    margin-bottom: 10px;
+                }
+
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+    & .payment__paragraph{
+        margin: 15px 20px 0px 20px;
+        color: #737373;
+        font-size: 13px;
+        
+    }
+
+    & .payment__nextbtn{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        & button{
+            border-radius: 4px;
+            font-size: 24px;
+            font-weight: 400;
+            min-height: 54px;
+            min-width: 400px;
+            color: #fff;
+            background-color: red;
+            border: 0;
+            border-radius: 4px;
+        }
+    }
+
+}
+
+@media (max-width:1225px){
+    .payment{
+        height: auto;
+    }
+}
+

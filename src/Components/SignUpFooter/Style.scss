@@ -1,0 +1,54 @@
+.signin__footer{
+    height: auto;
+    display: flex;
+    padding: 70px 0;
+    margin: auto;
+    padding-left: 150px;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+
+    & .signin__footer__text{
+        font-size: 16px;
+        color: grey;
+        margin-bottom: 40px;
+
+        & a{
+            font-size: 17px;
+            text-decoration: none;
+            color: grey;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    & .signup__footer__row{
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(230px,1fr));
+        gap: 15px;
+
+        & .footer__col{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            & select{
+                padding: 10px 30px 12px 10px;
+                width: 125px;
+            }
+
+            & .signup__footer__link{
+                margin-bottom: 20px;
+                font-size: 15px;
+                text-decoration: none;
+                color: grey;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
