@@ -13,7 +13,7 @@ const VideoPlayer = ({ source }: TypeProps) => {
 
   return (
     <div>
-      <video className="background-vedio" loop controls>
+      <video className="background-vedio" loop controls >
         <source src={source} type='video/mp4' />
       </video>
     </div>

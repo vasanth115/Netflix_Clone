@@ -41,7 +41,7 @@ const Payment = () => {
         <Link to="/" className='payment__btn'>Sign Out</Link>
       </div>
       <div className="payment__text">
-        <p>STEP 2 OF 3</p>
+        <p>STEP 3 OF 3</p>
         <h1>Choose the plan that’s right for you</h1>
       </div>
       <div className="payment__select">

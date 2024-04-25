@@ -1,12 +1,16 @@
 import './ForgetPassword.scss';
 import { useState } from 'react';
 import useApiCall from '../../CustomeHooks/useApiCall';
+import { Link } from 'react-router-dom';
+
+
 
 const ForgetPasswordForm = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [ success , setSuccess ] = useState('')
     const { fetchUserData } = useApiCall('Subscribers');
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,8 +65,8 @@ const ForgetPasswordForm = () => {
                 if (!response.ok) {
                     throw new Error('Failed to update password');
                 }
-
-                setError('Password Changed');
+                setError('')
+                setSuccess('Password Changed');
             } else {
                 setError('User does not exist');
             }
@@ -75,12 +79,14 @@ const ForgetPasswordForm = () => {
         <div className='forget__password'>
             <h1 className="password__title">Forget Password</h1>
             {error && <div className='password__error'>{error}</div>}
+            {success && <div className='password__success'>{success}</div>}
             <form className='forget__password__form' onSubmit={handleSubmit}>
                 <input type="email" className='password__form__input' placeholder='Email Address' value={email} onChange={handleEmailChange} />
                 <input type="password" className='password__form__input' placeholder='Password' value={password} onChange={handlePasswordChange} />
                 <input type="password" className='password__form__input' placeholder='Confirm Password' value={confirmPassword} onChange={handleConfirmPasswordChange} />
                 <button type="submit" className="password__btn">Change Password</button>
             </form>
+            <p className='password__paragrapgh'>Did You Changed ? <Link to='/login' className='password__link'>Sign In</Link></p>
         </div>
     );
 };
