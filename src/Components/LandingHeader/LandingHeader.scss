@@ -46,4 +46,22 @@
             font-size: 24px;
         }
     }
+
+    & .signout{
+        margin-right: 40px;
+
+        & .signout__btn{
+            display: block;
+            width: 104px;
+            height: fit-content;
+            color: #fff;
+            border: 0;
+            font-size: 15px;
+            border-radius: 3px;
+            padding: 8px 17px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: #e50914;
+        }
+    }
 }

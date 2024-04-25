@@ -1,6 +1,7 @@
-import SeriesDescription from "../Components/VedioPlayer/SeriesDesceiption/SeriesDescription";
-import VideoPlayer from "../Components/VedioPlayer/VideoPlayer";
-import { useFormStore } from "../Zustand/Store";
+import BackButton from "../../Components/BackButton/BackButton";
+import SeriesDescription from "../../Components/VedioPlayer/SeriesDesceiption/SeriesDescription";
+import VideoPlayer from "../../Components/VedioPlayer/VideoPlayer";
+import { useFormStore } from "../../Zustand/Store";
 import { useNavigate } from "react-router-dom";
 
 const SeriesScreen = () => {
@@ -14,6 +15,7 @@ const SeriesScreen = () => {
 
   return (
     <div>
+      <BackButton />
       <VideoPlayer source={episode.vedio} />
       <SeriesDescription name={episode.episodeName} />
     </div>

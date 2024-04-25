@@ -7,7 +7,7 @@ const movieNameArray = [ "Fantasy" , "Crime" , "Adventure" , "Thriller" , "Anima
 
 const MovieShow = () => {
     const navigate = useNavigate()
-    const { posterData, loading, error } = usePosterApi();
+    const { posterData } = usePosterApi();
     const { setDataset } = useFormStore()
 
     const HandleClick = (id : number) => {

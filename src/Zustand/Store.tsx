@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
-
-interface FormState {
+ export const initialdata = { id: 0, title: '', year: '', runtime: '', genres: '', director: '', actors: '', plot: '', posterUrl: '', vedio: '' }
+export interface FormState {
   email: string;
   name: string;
   password: string;
@@ -23,7 +23,7 @@ export const useFormStore = create<FormState>((set) => ({
   name: '',
   password: '',
   islogin: false,
-  dataset: { id: 0, title: '', year: '', runtime: '', genres: '', director: '', actors: '', plot: '', posterUrl: '', vedio: '' },
+  dataset: initialdata,
   serieslist: [], 
   episode : {episodeName:'' , plot : '' , vedio : ''},
   setEmail: (email) => set({ email }),
@@ -62,3 +62,5 @@ type Season = {
   posterURL: string;
   episodes: Episode[];
 };
+
+

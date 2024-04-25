@@ -9,8 +9,8 @@ import SignUpStep2 from './Components/SignUpStep2/SignUpStep2';
 import Payment from './Components/RegisterPayment/Payment';
 import Landing from './Pages/Landing';
 import VedioScreen from './Pages/VedioScreen';
-import Series from './Pages/Series';
-import SeriesScreen from './Pages/SeriesScreen';
+import Series from './Pages/SeiresPage/Series';
+import SeriesScreen from './Pages/SeiresPage/SeriesScreen';
 import PrivateRouter from './Components/PrivateRouter/PrivateRouter';
 import PageNotFound from './Pages/PageNotFound';
 
@@ -32,7 +32,7 @@ function App() {
         <Route path='/vedioplayer' element={<VedioScreen />} />
         <Route path='/series' element={<Series />} />
         <Route path='/seriesscreen' element={<SeriesScreen />} />
-        <Route path='*' element={<PageNotFound />} />
+        <Route path='*' element={<PageNotFound />  } />
       </Routes>
     </Router>
   );

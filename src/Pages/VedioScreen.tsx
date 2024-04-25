@@ -2,6 +2,7 @@ import { useFormStore } from "../Zustand/Store"
 import VideoPlayer from "../Components/VedioPlayer/VideoPlayer";
 import Description from "../Components/VedioPlayer/Description";
 import { useEffect } from "react";
+import BackButton from "../Components/BackButton/BackButton";
 
 
 const VedioScreen = () => {
@@ -16,6 +17,7 @@ const VedioScreen = () => {
 
   return (
     <div>
+      <BackButton />
       <VideoPlayer source={dataset.vedio}/>
       <Description dataset={dataset}/>
     </div>

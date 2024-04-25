@@ -1,7 +1,7 @@
 import  './VedioPlayer.scss'
 
 const Description = ({ dataset }: { dataset: TypePoster }) => {
-  const { id, title, year, runtime, genres, director, actors, plot, posterUrl, vedio } = dataset;
+  const {  title, year, genres, director, actors, plot } = dataset;
   return (
     <div className='description'>
        <h1 className='description__title'>{title} | {year} | {actors}</h1>

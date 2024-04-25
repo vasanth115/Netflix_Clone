@@ -1,0 +1,18 @@
+.Back__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background: rgba($color: #000000, $alpha: 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    & .Back__arraow{
+        font-size: 32px;
+        color: #fff;
+        text-align: center;
+    }
+}
