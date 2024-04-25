@@ -1,17 +1,13 @@
-
+import { Link } from 'react-router-dom'
+import image from '../../public/images/misc/pagenotfound.png'
+import './pageNotFound.scss'
 
 const PageNotFound = () => {
   return (
-    <div style={{
-        display:"flex",
-        justifyContent:"center",
-        alignItems:"center",
-        height:"100vh",
-        width:"100%"
-    }}>
-        <h1 style={{color:"white",
-            fontSize:"58px"
-        }}>Oops , Page Not Found</h1>
+    <div className='error__page'>
+      <img src={image} alt="" height='400px' width="400px" />
+        <h1>Oops , Page Not Found</h1>
+        <Link to='/' className='link'>Redirect</Link>
     </div>
   )
 }

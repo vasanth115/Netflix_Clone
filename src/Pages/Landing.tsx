@@ -11,7 +11,7 @@ const Landing = () => {
   return (
     <div>
       <LandingHeader />
-       <LandingSlider  />
+      <LandingSlider  />
       <MovieShow />
       <SeriesShow />
     </div>

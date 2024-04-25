@@ -13,6 +13,8 @@ import Series from './Pages/SeiresPage/Series';
 import SeriesScreen from './Pages/SeiresPage/SeriesScreen';
 import PrivateRouter from './Components/PrivateRouter/PrivateRouter';
 import PageNotFound from './Pages/PageNotFound';
+import LoadingPage from './Pages/LoadingPage';
+import ForgetPassword from './Pages/ForgetPassword';
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path='/loading' element={<LoadingPage />} />
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<LoginLayout />} />
         <Route path='/register' element={<SignUp />} />
@@ -33,6 +36,7 @@ function App() {
         <Route path='/series' element={<Series />} />
         <Route path='/seriesscreen' element={<SeriesScreen />} />
         <Route path='*' element={<PageNotFound />  } />
+        <Route path='/forgetPassword' element={<ForgetPassword />} />
       </Routes>
     </Router>
   );
@@ -48,5 +52,6 @@ function LoginLayout() {
     </>
   );
 }
+
 
 export default App;

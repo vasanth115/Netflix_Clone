@@ -3,7 +3,7 @@
     {
       "id": "b506",
       "email": "vasanth115@gmail.com",
-      "password": "vasanth115"
+      "password": "vasanth"
     },
     {
       "id": "972b",
@@ -18,7 +18,22 @@
     {
       "id": "a9aa",
       "email": "subash@gmail.com",
-      "password": "subash@123"
+      "password": "subash"
+    },
+    {
+      "id": "8d5f",
+      "email": "ranjith@gmail.com",
+      "password": "ranjith@1234"
+    },
+    {
+      "id": "e1d6",
+      "email": "suthrasan@gmail.com",
+      "password": "dMpnwEGzHa"
+    },
+    {
+      "id": "efb1",
+      "email": "vasanth1151@gmail.com",
+      "password": "pfCMccYVKP"
     }
   ]
 }

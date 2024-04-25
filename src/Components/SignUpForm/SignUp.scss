@@ -56,12 +56,26 @@
                 border-radius: 5px;
             }
 
-            & .register__forgetpassword{
-                text-decoration: none;
-                color: rgb(12, 156, 213);
-                font-size: 18px;
-                margin-bottom: 13px;
+            & .password_fill{
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0px;
+
+                & .register__forgetpassword{
+                    text-decoration: none;
+                    color: rgb(12, 156, 213);
+                    font-size: 18px;
+                    margin-bottom: 13px;
+                    cursor: pointer;
+                }
+
+                & .show__hide__password{
+                    & input {
+                        margin-right: 10px;
+                    }
+                }
             }
+
         }
     }
 }

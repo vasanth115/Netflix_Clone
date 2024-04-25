@@ -11,7 +11,7 @@ const SeiresList = () => {
 
     useEffect(() => {
         if (serieslist.length === 0) {
-            navigate("/landing");
+            navigate("/loading");
         }
     }, [serieslist, navigate]);
 

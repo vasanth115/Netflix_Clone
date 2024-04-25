@@ -24,7 +24,7 @@ const Payment = () => {
     if(elements.length > 0){
       // Navigate to Landing
       setIslogin(true)
-      Navigate('/landing')
+      Navigate('/loading')
     }
     else{
       alert("Please Choose Your pack")

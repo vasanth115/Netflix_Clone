@@ -10,6 +10,7 @@ import SignUpFooter from '../SignUpFooter/SignUpFooter';
 const SignUpForm = () => {
   const { email, password, setPassword } = useFormStore();
   const [isValidPassword, setIsValidPassword] = useState(true);
+  const [ showPassword , setShowPassword ] = useState(false)
   const Navigate = useNavigate()
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,35 +22,46 @@ const SignUpForm = () => {
     e.preventDefault();
     setIsValidPassword(true);
     const isValid = password.length >= 6;
-    if(isValid && email){
+    if (isValid && email) {
       setIsValidPassword(isValid);
       Navigate('/step2')
     }
-    else{
+    else {
       alert("Must Fill the Password")
       setIsValidPassword(isValid);
     }
 
     const details = {
-        email,
-        password
+      email,
+      password
     }
 
     try {
-        const response = await fetch("http://localhost:8000/Subscribers", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(details)
-        });
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
+      const response = await fetch("http://localhost:8000/Subscribers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(details)
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
   };
+
+
+  const PasswordGenerator = (length: number) => {
+    let generated_Password = ""
+    const CharacterSet = "abcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for (let i = 0; i < length; i++) {
+      const random = Math.floor(Math.random() * CharacterSet.length)
+      generated_Password += CharacterSet[random];
+    }
+    setPassword(generated_Password)
+  }
 
   return (
     <div className='register__form'>
@@ -67,14 +79,20 @@ const SignUpForm = () => {
           <p className="register__text">Enter your password and you'll be watching in no time.</p>
           <input type="email" className='register__input' placeholder='Email' value={email} readOnly />
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             className={`register__input ${isValidPassword ? '' : 'register__input--invalid'}`}
             placeholder='Password'
             value={password}
             onChange={handlePasswordChange}
           />
           {!isValidPassword && <p className="register__error">Password must be at least 6 characters long</p>}
-          <a href="" className='register__forgetpassword'>Forgot your password?</a>
+          <div className="password_fill">
+            <a className='register__forgetpassword' onClick={() => PasswordGenerator(10)}>Suggest some password</a>
+            <div className="show__hide__password">
+              <input type="checkbox" name="" id="" onChange={() =>setShowPassword(!showPassword)}/>
+              <span>{showPassword ? "Hide" : "Show"} Password</span>
+            </div>
+          </div>
           <button type="submit" className='register__button'>Next</button>
         </form>
       </div>

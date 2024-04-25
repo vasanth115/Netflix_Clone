@@ -39,7 +39,7 @@ const SignInComponent = () => {
         if (userobject[0].password === password) {
           setError('');
           setIslogin(true)
-          Navigate('/landing')
+          Navigate('/loading')
         } else {
           setError("Invalid password");
         }
@@ -63,7 +63,7 @@ const SignInComponent = () => {
       </form>
       <h2 className='signin__or'>or</h2>
       <button className='signin__code__btn'>Use Sign - In Code</button>
-      <a className='form__forget'>Forget Password?</a>
+      <a className='form__forget' onClick={() =>Navigate('/forgetPassword')}>Forget Password?</a>
       <div className="signin__remember">
         <input type="checkbox" name="" id="" />
         <p>Remember me</p>

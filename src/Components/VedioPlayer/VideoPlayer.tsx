@@ -1,28 +1,27 @@
-import './VedioPlayer.scss'
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import './VedioPlayer.scss';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const VideoPlayer = ({source} :TypeProps ) => {
+const VideoPlayer = ({ source }: TypeProps) => {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  useEffect(()=>{
-    if(!source){
-      navigate('/landing')
+  useEffect(() => {
+    if (!source) {
+      navigate('/loading');
     }
-  },[])
+  }, [source]); 
 
   return (
     <div>
-       <video className="background-vedio"  loop controls >
-                <source src={source} type='video/mp4' />
-        </video>
+      <video className="background-vedio" loop controls>
+        <source src={source} type='video/mp4' />
+      </video>
     </div>
-  )
-}
+  );
+};
 
-export default VideoPlayer
+export default VideoPlayer;
 
 type TypeProps = {
-  source : string
-}
+  source: string;
+};
