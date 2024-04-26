@@ -150,6 +150,84 @@
                     "vedio":"https://i.imgur.com/SwJjD0H.mp4"
                 }
             ]
+        },
+        {
+            "id":5,
+            "name" : "Buruto season 2",
+            "year" : "2016",
+            "episodesNO" : "6",
+            "posterURL" : "https://i.imgur.com/DYnUmHs.jpeg",
+            "episodes":[
+                {
+                    "episodeName":"Boruto Uzumaki Rasengon Training",
+                    "plot":"The Son of the Seventh hokage Training",
+                    "vedio":"https://i.imgur.com/OXpA0lM.mp4"
+                },
+                {
+                    "episodeName":"Sasuke and Sarada love",
+                    "plot":"Shadow hokage and his daughter love accept",
+                    "vedio":"https://i.imgur.com/tfVucJL.mp4"
+                },
+                {
+                    "episodeName":"Team 25 Chunin Exam",
+                    "plot":"All Land Shinibies",
+                    "vedio":"https://i.imgur.com/isIy0IN.mp4"
+                },
+                {
+                    "episodeName":"Chunin Exam Level 2",
+                    "plot":"Forest Scroll",
+                    "vedio":"https://i.imgur.com/QFPHcD4.mp4"
+                },
+                {
+                    "episodeName":"Team 25 reached destiny",
+                    "plot":"Team 25 Got the  both land and water scroll",
+                    "vedio":"https://i.imgur.com/8zD4Cqv.mp4"
+                },
+                {
+                    "episodeName":"Chunin Exam Results",
+                    "plot":"8 Teams Passed the Exam ",
+                    "vedio":"https://i.imgur.com/SwJjD0H.mp4"
+                }
+            ]
+        },
+        {
+            "id":6,
+            "name" : "Buruto season 3",
+            "year" : "2016",
+            "episodesNO" : "6",
+            "posterURL" : "https://i.imgur.com/DYnUmHs.jpeg",
+            "episodes":[
+                {
+                    "episodeName":"Chunin Exam Level 3 ",
+                    "plot":"Fight With 1 VS 1 ",
+                    "vedio":"https://i.imgur.com/OXpA0lM.mp4"
+                },
+                {
+                    "episodeName":"Boruto Vs Gaara Son ",
+                    "plot":"Boruto Win the Match ",
+                    "vedio":"https://i.imgur.com/tfVucJL.mp4"
+                },
+                {
+                    "episodeName":"Boruto DisQualified",
+                    "plot":"Lee DisQualified and gaara Son Wins",
+                    "vedio":"https://i.imgur.com/isIy0IN.mp4"
+                },
+                {
+                    "episodeName":"Sadara vs Sai daughter",
+                    "plot":"power of Sharigan and Chidori",
+                    "vedio":"https://i.imgur.com/QFPHcD4.mp4"
+                },
+                {
+                    "episodeName":"Otsusuki Attack",
+                    "plot":"Sasuke and Naruto figthing Isshiki Otsutsuki",
+                    "vedio":"https://i.imgur.com/8zD4Cqv.mp4"
+                },
+                {
+                    "episodeName":"Finally Defeated",
+                    "plot":"Returns to Leaf",
+                    "vedio":"https://i.imgur.com/SwJjD0H.mp4"
+                }
+            ]
         }
     ]
 }

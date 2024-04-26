@@ -7,6 +7,7 @@
 
 .series__list__container{
     margin: 70px 0px 30px 0px;
+    position: relative;
 
     & .series__container{
         height: auto;
@@ -59,5 +60,42 @@
     
             }
         }
+
+        & .disabled__left{
+            display: none;
+        }
+
+        & .disabled__right{
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        
+
+        & .scrolling__button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            color: #000;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+            background-color: #fff;
+
+            &.left {
+                left: 10px;
+            }
+
+            &.right {
+                right: 10px;
+            }
+        }
     }
+    
 }
