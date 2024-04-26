@@ -15,6 +15,7 @@ import PrivateRouter from './Components/PrivateRouter/PrivateRouter';
 import PageNotFound from './Pages/PageNotFound';
 import LoadingPage from './Pages/LoadingPage';
 import ForgetPassword from './Pages/ForgetPassword';
+import SearchPage from './Pages/SearchPage';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path='/seriesscreen' element={<SeriesScreen />} />
         <Route path='*' element={<PageNotFound />  } />
         <Route path='/forgetPassword' element={<ForgetPassword />} />
+        <Route path='/search' element={<SearchPage />} />
       </Routes>
     </Router>
   );

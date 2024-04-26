@@ -8,7 +8,8 @@ export interface FormState {
   islogin: boolean;
   dataset: TypePoster;
   serieslist: Season[];
-  episode : Episode
+  episode : Episode;
+  searchTerm : string
   setEmail: (email: string) => void;
   setName: (name: string) => void;
   setPassword: (password: string) => void;
@@ -16,6 +17,7 @@ export interface FormState {
   setDataset: (data: TypePoster) => void;
   setSerieslist: (data: Season[]) => void; 
   setEpisode : (data : Episode) => void;
+  setSearchTerm :(data : string) => void;
 }
 
 export const useFormStore = create<FormState>((set) => ({
@@ -26,13 +28,15 @@ export const useFormStore = create<FormState>((set) => ({
   dataset: initialdata,
   serieslist: [], 
   episode : {episodeName:'' , plot : '' , vedio : ''},
+  searchTerm:'',
   setEmail: (email) => set({ email }),
   setName: (name) => set({ name }),
   setPassword: (password) => set({ password }),
   setIslogin: (islogin) => set({ islogin }),
   setDataset: (data) => set({ dataset: data }),
   setSerieslist: (data) => set({ serieslist: data }) ,
-  setEpisode : (data) => set({episode : data})
+  setEpisode : (data) => set({episode : data}),
+  setSearchTerm : (data) => set({searchTerm : data})
 }));
 
 type TypePoster = {

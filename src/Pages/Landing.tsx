@@ -4,13 +4,12 @@ import MovieShow from "../Components/MovieShow/MovieShow"
 import SeriesShow from "../Components/MovieShow/SeriesShow"
 
 
-
 const Landing = () => {
 
   
   return (
     <div>
-      <LandingHeader />
+      <LandingHeader show={true} />
       <LandingSlider  />
       <MovieShow />
       <SeriesShow />

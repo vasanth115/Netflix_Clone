@@ -1,101 +1,87 @@
-import { useState, useEffect, useRef } from "react"
-import './Series.scss'
-import { useFormStore } from "../../Zustand/Store"
-import { useNavigate } from "react-router-dom"
+import { useState, useEffect, useRef } from "react";
+import './Series.scss';
+import { useFormStore } from "../../Zustand/Store";
+import useSeriesApi from "../../CustomeHooks/useSeriesApi";
+import { useNavigate } from "react-router-dom";
 
 const SeriesShow = () => {
-    const navigate = useNavigate()
-
+    const navigate = useNavigate();
     const seriesRef = useRef<HTMLDivElement>(null);
+    const { seriesdata } = useSeriesApi()
+    const { setSerieslist } = useFormStore();
+    const [showLeftArrow, setShowLeftArrow] = useState(false);
+    const [showRightArrow, setShowRightArrow] = useState(false);
 
-
-    const [isHovered, setIsHovered] = useState(false);
-
-    const { setSerieslist } = useFormStore()
-
-    const [seriesdata, setSeriesdata] = useState<Season[]>([])
+  
 
     useEffect(() => {
-        const dataFetch = async () => {
-            const response = await fetch("http://localhost:2000/series");
-            const data = await response.json()
-            setSeriesdata(data)
-        }
-
-        dataFetch()
-    }, [])
-
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
-
-    const handleScroll = (scrollOffset: number) => {
+        const handleScroll = () => {
+            if (seriesRef.current) {
+                const { scrollLeft, clientWidth, scrollWidth } = seriesRef.current;
+                setShowLeftArrow(scrollLeft > 0);
+                setShowRightArrow(scrollLeft + clientWidth < scrollWidth);
+            }
+        };
 
         if (seriesRef.current) {
-            // Calculate new scroll position with limit
-            const containerWidth = seriesRef.current.clientWidth;
-            const totalScrollWidth = seriesRef.current.scrollWidth - containerWidth;
-            const newScrollPosition = Math.max(0, Math.min(totalScrollWidth, seriesRef.current.scrollLeft + scrollOffset));
-            seriesRef.current.scrollTo({ left: newScrollPosition, behavior: 'smooth' });
+            seriesRef.current.addEventListener("scroll", handleScroll);
+            // Initial check for arrows visibility
+            handleScroll();
         }
-        isScrollEnd
-    };
+
+        return () => {
+            if (seriesRef.current) {
+                seriesRef.current.removeEventListener("scroll", handleScroll);
+            }
+        };
+    }, []);
 
     const HandleClick = (element: Season) => {
-        setSerieslist([element])
-        navigate('/series')
-    }
-
-    const isScrollStart = () => {
-        if (seriesRef.current) {
-            return seriesRef.current.scrollLeft === 0;
-        }
-        return true;
+        setSerieslist([element]);
+        navigate('/series');
     };
-
-    const isScrollEnd = () => {
-        if (seriesRef.current) {
-            const { scrollLeft, clientWidth, scrollWidth } = seriesRef.current;
-            return Math.round(scrollLeft + clientWidth) >= scrollWidth;
-        }
-        return true;
-    };
-
-
-
 
     return (
         <div className="series__list__container">
-            <div className="series__container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div
+                className="series__container"
+                onMouseEnter={() => {
+                    setShowLeftArrow(true);
+                    setShowRightArrow(true); 
+                }} 
+                onMouseLeave={() => {setShowLeftArrow(false)
+                    setShowRightArrow(false)
+                }}
+            >
                 <h2 className="series__title">Series</h2>
                 <div className="series__list" ref={seriesRef}>
-                    {
-                        seriesdata.map((item) => (
-                            <div className="series" key={item.id} onClick={() => HandleClick(item)}>
-                                <img src={item.posterURL} alt={item.name} />
-                                <p className="series__name">{item.name}</p>
-                            </div>
-                        ))
-                    }
+                    {seriesdata.map((item) => (
+                        <div className="series" key={item.id} onClick={() => HandleClick(item)}>
+                            <img src={item.posterURL} alt={item.name} />
+                            <p className="series__name">{item.name}</p>
+                        </div>
+                    ))}
                 </div>
-                <button className={`scrolling__button left ${isHovered && !isScrollStart() ? '' : 'hidden'}`} onClick={() => handleScroll(-500)} disabled={isScrollStart()}>
+                <button
+                    className={`scrolling__button left ${showLeftArrow ? '' : 'hidden'}`}
+                    onClick={() => seriesRef.current?.scrollBy({ left: -500, behavior: 'smooth' })}
+                    disabled={!showLeftArrow}
+                >
                     &lt;
                 </button>
-                <button className={`scrolling__button right ${isHovered && !isScrollEnd() ? '' : 'hidden'}`} onClick={() => handleScroll(500)} disabled={isScrollEnd()}>
+                <button
+                    className={`scrolling__button right ${showRightArrow ? '' : 'hidden'}`}
+                    onClick={() => seriesRef.current?.scrollBy({ left: 500, behavior: 'smooth' })}
+                    disabled={!showRightArrow}
+                >
                     &gt;
                 </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default SeriesShow
-
+export default SeriesShow;
 
 type Episode = {
     episodeName: string;
@@ -104,7 +90,7 @@ type Episode = {
 };
 
 type Season = {
-    id: number
+    id: number;
     name: string;
     year: string;
     episodesNO: string;

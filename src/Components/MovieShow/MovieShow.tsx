@@ -4,7 +4,7 @@ import { useFormStore } from "../../Zustand/Store";
 import usePosterApi from "../../CustomeHooks/usePosterApi";
 import { useNavigate } from "react-router-dom";
 
-const movieNameArray = ["Fantasy", "Crime", "Adventure", "Thriller", "Animation", "Mystery", "Biography", "Action", "War"];
+const movieNameArray = ["Fantasy", "Crime", "Adventure", "Thriller", "Animation", "Mystery", "Biography", "Action", "War" , "Romance" , "Drama" , "Horror" , "Comedy"];
 
 const MovieShow = () => {
     const navigate = useNavigate();
@@ -54,7 +54,7 @@ const MovieShow = () => {
         setHoveredIndex(null);
     };
 
-    const handleClick = (id: number) => {
+ const handleClick = (id: number) => {
         const data = posterData.find(movie => movie.id === id);
         if (data) {
             setDataset(data);
@@ -99,7 +99,7 @@ const MovieShow = () => {
                                     <img src={movie.posterUrl} alt={movie.title} />
                                     <div className="movie__title">{movie.title}</div>
                                 </div>
-                            )
+                            )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
                         ))}
                     </div>
                     {hoveredIndex === index && (
