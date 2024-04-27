@@ -5,7 +5,7 @@ import SeiresList from "../../Components/SeriesEpisodes/SeiresList"
 const Series = () => {
   return (
     <div>
-      <LandingHeader show={false}/>
+      <LandingHeader show={false} focus={false} />
       <BackButton />
       <SeiresList />
     </div>

@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer/Footer"
 import LandingHeader from "../Components/LandingHeader/LandingHeader"
 import LandingSlider from "../Components/LandingSlider/LandingSlider"
 import MovieShow from "../Components/MovieShow/MovieShow"
@@ -9,10 +10,11 @@ const Landing = () => {
   
   return (
     <div>
-      <LandingHeader show={true} />
+      <LandingHeader show={true} focus={false} /> 
       <LandingSlider  />
       <MovieShow />
       <SeriesShow />
+      <Footer />
     </div>
   )
 }

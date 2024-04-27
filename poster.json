@@ -2,39 +2,63 @@
     "movies": [
         {
             "id":1,
-            "title" : "The Elephant Whisperers",
+            "title" : "Spider Man Home Coming",
             "IMDb" : "7.5/10",
-            "posterUrl":"https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABW9mSWPEJp91k2hVwTVIjP8To489ce9khb3XtHCD7GFsvFX0x5AGYFsAlQAIMhFuivusSZNhk1pBdIr-muqKQK6xi6WbnXuqWykS.jpg?r=e78" 
+            "posterUrl":"https://i.imgur.com/Fqf9HSa.jpeg" 
         },
         {
             "id":2,
-            "title": "Beast",
+            "title": "Thor ragnarok",
             "IMDb":"5.3/10",
-            "posterUrl":"https://m.economictimes.com/thumb/msid-90961355,width-1200,height-900,resizemode-4,imgsize-61014/beast-poster.jpg"
+            "posterUrl":"https://i.imgur.com/m2KiuaG.jpeg"
         },
         {
             "id":3,
-            "title":"Baahubali: The Beginning",
+            "title":"Godzilla vs Kong",
             "IMDb":"8/10",
-            "posterUrl":"https://play-lh.googleusercontent.com/proxy/7HmkIYyPhpS3ILgO7n_ej_i8rBW4X-oBi9JCFvc9x6wtskCRJ3vexdZjkixhHwSx789Hmg8FKKAYmaQArACqD9XVMhRIEREwqmyDb9p9GGzlS1Uq3kEctGWpig=s1920-w1920-h1080"
+            "posterUrl":"https://i.imgur.com/ZasNqBG.jpeg"
         },
         {
             "id":4,
-            "title":"Baahubali 2: The Conclusion",
+            "title":"TransFormers",
             "IMDb":"8.4/10",
-            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc3G1TFNYwmqalBWoPxLYjh0M5YJt8WXcvAg&s"
+            "posterUrl":"https://i.imgur.com/cs3Qznq.jpeg"
         },
         {
             "id":5,
-            "title":"Doctor",
+            "title":"Dead Pool",
             "IMDb":"8.0/10",
-            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQBURBZtJGW8ScbqlICXhUWuxBveenqsTgxA&s"
+            "posterUrl":"https://i.imgur.com/ZunxFsJ.jpeg"
         },
         {
             "id":6,
-            "title":"Mersal",
+            "title":"KGF Chapter 2",
             "IMDb":"9.3/10",
-            "posterUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzUaQEIVQm-gAHHgg-BEmCnGi8fWNE9tllg&s"
+            "posterUrl":"https://i.imgur.com/YX0x6sP.jpeg"
+        },
+        {
+            "id":7,
+            "title":"Baahubali 2: The Conclusion",
+            "IMDb":"9.3/10",
+            "posterUrl":"https://i.imgur.com/b0J6HOT.jpeg"
+        },
+        {
+            "id":8,
+            "title":"RRR",
+            "IMDb":"9.3/10",
+            "posterUrl":"https://i.imgur.com/58jFTum.jpeg"
+        },
+        {
+            "id":9,
+            "title":"2.O",
+            "IMDb":"9.3/10",
+            "posterUrl":"https://i.imgur.com/wgxomZZ.jpeg"
+        },
+        {
+            "id":10,
+            "title":"ponniyin selvan",
+            "IMDb":"9.3/10",
+            "posterUrl":"https://i.imgur.com/fFxBVmo.jpeg"
         }
     ]
 }

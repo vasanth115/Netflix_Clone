@@ -7,7 +7,7 @@ const SearchPage = () => {
 
     return (
         <div>
-            <LandingHeader show={true} />
+            <LandingHeader show={true} focus={true} />
             <BackButton />
             <SearchContent />
         </div>
