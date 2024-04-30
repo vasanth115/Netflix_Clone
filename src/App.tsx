@@ -16,6 +16,8 @@ import PageNotFound from './Pages/PageNotFound';
 import LoadingPage from './Pages/LoadingPage';
 import ForgetPassword from './Pages/ForgetPassword';
 import SearchPage from './Pages/SearchPage';
+import PaymentDetails from './Components/PaymentDetails/PaymentDetails';
+import DebitPay from './Components/Debitpay/DebitPay';
 
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
         <Route path='*' element={<PageNotFound />  } />
         <Route path='/forgetPassword' element={<ForgetPassword />} />
         <Route path='/search' element={<SearchPage />} />
+        <Route path='/paymentstatus' element={<PaymentDetails />} />
+        <Route path='/debitpay' element={<DebitPay />} />
       </Routes>
     </Router>
   );
