@@ -18,6 +18,7 @@ import ForgetPassword from './Pages/ForgetPassword';
 import SearchPage from './Pages/SearchPage';
 import PaymentDetails from './Components/PaymentDetails/PaymentDetails';
 import DebitPay from './Components/Debitpay/DebitPay';
+import UPIPay from './Components/UPIpay/UPIPay';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path='/search' element={<SearchPage />} />
         <Route path='/paymentstatus' element={<PaymentDetails />} />
         <Route path='/debitpay' element={<DebitPay />} />
+        <Route path='/UPIpay' element={<UPIPay />} />
       </Routes>
     </Router>
   );

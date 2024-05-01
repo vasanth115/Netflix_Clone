@@ -73,6 +73,13 @@
       "cardNumber": "78233472349817",
       "expirationDate": "12/45",
       "nameOnCard": "vasanth k"
+    },
+    {
+      "id": "562d",
+      "email": "vasanth215@gmail.com",
+      "password": "vasanth215",
+      "type": "UPI Pay",
+      "upinumber": "6379641143"
     }
   ]
 }

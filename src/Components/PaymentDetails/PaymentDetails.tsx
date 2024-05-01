@@ -44,7 +44,7 @@ const PaymentDetails = () => {
                     </div>
                     <FaAngleRight className='right__arrow'/>
                 </div>
-                <div className="payment__select" onClick={()=> navigate('/upipay')}>
+                <div className="payment__select" onClick={()=> navigate('/UPIpay')}>
                     <h3>UPI  AutoPay</h3>
                     <div className="paymentcard_logo">
                         <img src={phonepay} alt="" />
