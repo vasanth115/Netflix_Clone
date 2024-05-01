@@ -31,25 +31,6 @@ const SignUpForm = () => {
       setIsValidPassword(isValid);
     }
 
-    const details = {
-      email,
-      password
-    }
-
-    try {
-      const response = await fetch("http://localhost:8000/Subscribers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(details)
-      });
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-    } catch (error) {
-      console.log(error);
-    }
   };
 
 

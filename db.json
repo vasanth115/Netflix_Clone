@@ -59,6 +59,20 @@
       "id": "9a2f",
       "email": "vimalraj@gmail.com",
       "password": "TEKKInzeEP"
+    },
+    {
+      "id": "c6d2",
+      "email": "praveenkumar@gmail.com",
+      "password": "IgkMaXzRxg"
+    },
+    {
+      "id": "ea13",
+      "email": "praveenkumar@gmail.com",
+      "password": "IgkMaXzRxg",
+      "cvv": "337",
+      "cardNumber": "78233472349817",
+      "expirationDate": "12/45",
+      "nameOnCard": "vasanth k"
     }
   ]
 }

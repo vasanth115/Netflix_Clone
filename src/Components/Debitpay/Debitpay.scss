@@ -45,7 +45,7 @@
             align-items: center;
             width: 100%;
 
-            & .depitcard__input__number{
+            & .debitcard__input__number{
                 padding: 15px 0px;
                 width: 400px;
                 color: #000;
@@ -57,14 +57,14 @@
             & .debitpay__date{
                 margin-bottom: 10px;
 
-                & .depitcard__input__date{
+                & .debitcard__input__date{
                     padding: 15px 0px;
                     width: 195px;
                     margin-right: 10px;
                     text-align: center;
                 }
 
-                & .depitcard__input__cvv{
+                & .debitcard__input__cvv{
                     padding: 15px 0px;
                     width: 195px;
                     text-align: center;
@@ -72,7 +72,7 @@
 
             }
 
-            & .depitcard__input__name{
+            & .debitcard__input__name{
                 padding: 15px 0px;
                 width: 400px;
                 font-size: 18px;

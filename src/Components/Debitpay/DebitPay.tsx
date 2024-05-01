@@ -1,16 +1,25 @@
-import  { useState } from 'react';
-import './Debitpay.scss';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useFormStore } from '../../Zustand/Store'; // Assuming Zustand store for form data
+import SignUpFooter from '../SignUpFooter/SignUpFooter';
+import { useNavigate } from 'react-router-dom';
+import './Debitpay.scss';
 import logo from '../../../public/images/icons/logo.svg';
 import visa from '../../../public/images/misc/visa_image.png';
 import mastercard from '../../../public/images/misc/mastercard-image.jpg';
-import { useFormStore } from '../../Zustand/Store';
-import SignUpFooter from '../SignUpFooter/SignUpFooter';
-import { useNavigate } from 'react-router-dom';
 
-const DebitPay = () => {
-    const navigate = useNavigate()
-  const { pack, packagecard } = useFormStore();
+interface SubscriberData {
+  email : string;
+  password : string;
+  cvv: string;
+  cardNumber: string;
+  expirationDate: string;
+  nameOnCard: string;
+}
+
+const DebitPay: React.FC = () => {
+  const navigate = useNavigate();
+  const { pack, packagecard, email , password } = useFormStore();
   const [cardNumber, setCardNumber] = useState('');
   const [expirationDate, setExpirationDate] = useState('');
   const [cvv, setCvv] = useState('');
@@ -18,31 +27,63 @@ const DebitPay = () => {
   const [error, setError] = useState('');
 
   const validateInputs = () => {
-    // Validate card number
     if (!cardNumber.trim()) {
       setError('Please enter your card number');
       return false;
     }
-    else if(!expirationDate){
-        setError('Please enter Expiration Date')
+    if (!expirationDate) {
+      setError('Please enter Expiration Date');
+      return false;
     }
-    else if(!cvv){
-        setError('please enter the CVV')
+    if (!cvv) {
+      setError('Please enter the CVV');
+      return false;
     }
-    else if(!nameOnCard){
-        setError('please Enter the Name ')
+    if (!nameOnCard) {
+      setError('Please enter the Name on Card');
+      return false;
     }
-    // Add more validation logic for expiration date, CVV, and name on card if needed
-
     return true;
   };
 
-  const handleStartSubscription = () => {
+  const handleStartSubscription = async () => {
     if (validateInputs()) {
-        navigate('/loading')
+      const subscriberData: SubscriberData = {
+        email,
+        password,
+        cvv,
+        cardNumber,
+        expirationDate,
+        nameOnCard,
+      };
+
+      try {
+        const response = await fetch(`http://localhost:8000/Subscribers`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(subscriberData),
+        });
+
+        if (!response.ok) {
+          throw new Error(
+            'Failed to update subscriber information. Server responded with status ' +
+              response.status
+          );
+        }
+
+        // const data = await response.json();
+        // console.log('Subscriber information updated successfully:', data);
+        navigate('/loading'); 
+      } catch (error) {
+        console.error('Error updating subscriber information:', error);
+        setError('An error occurred. Please try again later.'); // User-friendly error message
+      }
     }
   };
-
+  
+  
   return (
     <div className='Debitpay'>
       <div className='debitpay__header'>
@@ -60,38 +101,37 @@ const DebitPay = () => {
           <img src={visa} alt='' />
           <img src={mastercard} alt='' />
         </div>
-        {/* Display error message if card number is invalid */}
         {error && <p className='error-message'>{error}</p>}
         <div className='debitpay__input'>
           <input
             type='text'
             placeholder='Card Number'
-            className='depitcard__input__number'
+            className='debitcard__input__number'
             value={cardNumber}
-            onChange={(e) => setCardNumber(e.target.value)}
+            onChange={e => setCardNumber(e.target.value)}
           />
           <div className='debitpay__date'>
             <input
               type='text'
               placeholder='MM / YY'
-              className='depitcard__input__date'
+              className='debitcard__input__date'
               value={expirationDate}
-              onChange={(e) => setExpirationDate(e.target.value)}
+              onChange={e => setExpirationDate(e.target.value)}
             />
             <input
               type='text'
               placeholder='CVV'
-              className='depitcard__input__cvv'
+              className='debitcard__input__cvv'
               value={cvv}
-              onChange={(e) => setCvv(e.target.value)}
+              onChange={e => setCvv(e.target.value)}
             />
           </div>
           <input
             type='text'
             placeholder='Name on Card'
-            className='depitcard__input__name'
+            className='debitcard__input__name'
             value={nameOnCard}
-            onChange={(e) => setNameOnCard(e.target.value)}
+            onChange={e => setNameOnCard(e.target.value)}
           />
         </div>
         <div className='debitpay__package'>
