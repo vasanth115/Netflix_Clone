@@ -1,83 +1,34 @@
 {
   "Subscribers": [
     {
-      "id": "b506",
-      "email": "vasanth115@gmail.com",
-      "password": "vasanth115"
-    },
-    {
-      "id": "972b",
-      "email": "vasanthmoorthi4504@gmail.com",
-      "password": "vasanth215"
-    },
-    {
-      "id": "d1d6",
-      "email": "jayadev@gmail.com",
-      "password": "jayadev@1234"
-    },
-    {
-      "id": "a9aa",
-      "email": "subash@gmail.com",
-      "password": "subash"
-    },
-    {
-      "id": "8d5f",
-      "email": "ranjith@gmail.com",
-      "password": "ranjith@1234"
-    },
-    {
-      "id": "e1d6",
-      "email": "suthrasan@gmail.com",
-      "password": "dMpnwEGzHa"
-    },
-    {
-      "id": "efb1",
-      "email": "vasanth1151@gmail.com",
-      "password": "pfCMccYVKP"
-    },
-    {
-      "id": "1539",
-      "email": "pradeepsudhrsan@gmail.com",
-      "password": "pradeep@123456789"
-    },
-    {
-      "id": "11be",
-      "email": "jeeva@gmail.com",
-      "password": "FsduJfPjFS"
-    },
-    {
-      "id": "dd40",
-      "email": "monisha111@gmail.com",
-      "password": "jTqnHhsNyQ"
-    },
-    {
-      "id": "9a5a",
-      "email": "prithiv@gmail.com",
-      "password": "NujGePejEd"
-    },
-    {
-      "id": "9a2f",
-      "email": "vimalraj@gmail.com",
-      "password": "TEKKInzeEP"
-    },
-    {
-      "id": "c6d2",
-      "email": "praveenkumar@gmail.com",
-      "password": "IgkMaXzRxg"
-    },
-    {
       "id": "ea13",
       "email": "praveenkumar@gmail.com",
       "password": "IgkMaXzRxg",
       "cvv": "337",
       "cardNumber": "78233472349817",
       "expirationDate": "12/45",
-      "nameOnCard": "vasanth k"
+      "nameOnCard": "praveen kumar"
     },
     {
       "id": "562d",
       "email": "vasanth215@gmail.com",
       "password": "vasanth215",
+      "type": "UPI Pay",
+      "upinumber": "6379641143"
+    },
+    {
+      "id": "7ef6",
+      "email": "vasanth115@gmail.com",
+      "password": "vasanth115",
+      "cvv": "378",
+      "cardNumber": "123456789012",
+      "expirationDate": "12/32",
+      "nameOnCard": "Vasanth K"
+    },
+    {
+      "id": "b252",
+      "email": "sutharsan@gmail.com",
+      "password": "sutharsan@1234",
       "type": "UPI Pay",
       "upinumber": "6379641143"
     }

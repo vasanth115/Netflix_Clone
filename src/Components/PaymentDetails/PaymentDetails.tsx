@@ -42,7 +42,7 @@ const PaymentDetails = () => {
                         <img src={visa} alt="" />
                         <img src={mastercard} alt="" />
                     </div>
-                    <FaAngleRight className='right__arrow'/>
+                    <FaAngleRight className='right__arrow rightarrow__first'/>
                 </div>
                 <div className="payment__select" onClick={()=> navigate('/UPIpay')}>
                     <h3>UPI  AutoPay</h3>
@@ -51,7 +51,7 @@ const PaymentDetails = () => {
                         <img src={gpay} alt="" />
                         <img src={BHMIlogo} alt="" />
                     </div>
-                    <FaAngleRight className='right__arrow'/>
+                    <FaAngleRight className='right__arrow rightarrow__second'/>
                 </div>
             </div>
         </div>

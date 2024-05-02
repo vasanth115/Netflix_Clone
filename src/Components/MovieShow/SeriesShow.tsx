@@ -12,14 +12,14 @@ const SeriesShow = () => {
     const [showLeftArrow, setShowLeftArrow] = useState(false);
     const [showRightArrow, setShowRightArrow] = useState(false);
 
-  
-
     useEffect(() => {
         const handleScroll = () => {
             if (seriesRef.current) {
                 const { scrollLeft, clientWidth, scrollWidth } = seriesRef.current;
-                setShowLeftArrow(scrollLeft > 0);
-                setShowRightArrow(scrollLeft + clientWidth < scrollWidth);
+                const isAtStart = scrollLeft === 0;
+                const isAtEnd = scrollLeft + clientWidth === scrollWidth;
+                setShowLeftArrow(!isAtStart);
+                setShowRightArrow(!isAtEnd);
             }
         };
 
@@ -47,10 +47,11 @@ const SeriesShow = () => {
                 className="series__container"
                 onMouseEnter={() => {
                     setShowLeftArrow(true);
-                    setShowRightArrow(true); 
-                }} 
-                onMouseLeave={() => {setShowLeftArrow(false)
-                    setShowRightArrow(false)
+                    setShowRightArrow(true);
+                }}
+                onMouseLeave={() => {
+                    setShowLeftArrow(false);
+                    setShowRightArrow(false);
                 }}
             >
                 <h2 className="series__title">Series</h2>
