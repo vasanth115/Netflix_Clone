@@ -1,4 +1,4 @@
-// SignIn.tsx
+// SignIn Component
 import { Link, useNavigate } from 'react-router-dom';
 import './SignIn.scss';
 import { useState } from 'react';

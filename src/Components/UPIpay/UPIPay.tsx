@@ -1,3 +1,5 @@
+// Payment Process using  UPI 
+
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../public/images/icons/logo.svg";
@@ -56,7 +58,7 @@ const UPIPay: React.FC = () => {
         })
         .catch((error) => {
           console.error("Error updating subscriber information:", error);
-          alert("An error occurred. Please try again later."); // Provide user-friendly error message
+          alert("An error occurred. Please try again later.");
         });
     }
   }, [timeLeft, email, password, number]);

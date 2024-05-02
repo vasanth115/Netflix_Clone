@@ -1,3 +1,5 @@
+// Jumbotron of the Home page
+
 import './Jumbotron.scss'
 import Data from '../../JSON/Jamutron.json'
 

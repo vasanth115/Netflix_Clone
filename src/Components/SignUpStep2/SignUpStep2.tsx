@@ -1,3 +1,5 @@
+// Sign Up Process Step 2
+
 import './Style.scss'
 import logo from '../../../public/images/icons/logo.svg'
 import { Link,useNavigate } from 'react-router-dom'

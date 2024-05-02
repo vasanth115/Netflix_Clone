@@ -1,3 +1,5 @@
+// Choosing of the Package for subscription
+
 import './payment.scss';
 import logo from '../../../public/images/icons/logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
@@ -15,12 +17,8 @@ const Payment = () => {
     elements.forEach((el) => el.classList.remove('active'));
     const selectedItem = e.currentTarget;
     selectedItem.classList.add('active');
-
-    // Access item properties here
     setpack(item.price)
     setpackage(item.title)
-    // console.log('Clicked item title:', item.title);
-    // console.log('Clicked item quality:', item.price);
   };
 
   const HandlePayment = () => {

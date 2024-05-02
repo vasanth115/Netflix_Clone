@@ -1,3 +1,5 @@
+// Description Component for Movies
+
 import  './VedioPlayer.scss'
 
 const Description = ({ dataset }: { dataset: TypePoster }) => {

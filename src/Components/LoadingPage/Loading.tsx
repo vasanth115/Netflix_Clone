@@ -1,3 +1,5 @@
+// Loading Component
+
 import './Loding.scss'
 
 const Loading = () => {

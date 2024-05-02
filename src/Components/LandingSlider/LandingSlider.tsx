@@ -1,3 +1,5 @@
+// Landing Page Image Slider Component
+
 import './LandingSlider.scss';
 import { useEffect, useState } from 'react';
 import posterData from '../../../poster.json'

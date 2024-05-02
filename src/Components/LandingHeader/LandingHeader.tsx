@@ -1,3 +1,5 @@
+// Header of the Landing Page
+
 import React, { useEffect, useRef } from 'react';
 import './LandingHeader.scss';
 import logo from '../../../public/images/icons/logo.svg';

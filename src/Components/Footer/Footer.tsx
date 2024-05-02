@@ -1,3 +1,5 @@
+// Main Footer Component
+
 import './Footer.scss'
 
 const Footer = () => {

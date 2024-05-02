@@ -1,3 +1,5 @@
+// Series Episode Showing Page
+
 import './SeriesList.scss';
 import { useFormStore } from '../../Zustand/Store';
 import { useNavigate } from 'react-router-dom';

@@ -1,9 +1,11 @@
+// Sign Up page Footer Component step 1
+
 import './Style.scss'
 
 const SignUpFooter = () => {
   return (
     <div className='signin__footer'>
-      <p className="signin__footer__text">Questions? Call <a href="">000-800-919-1694</a></p>
+      <p className="signin__footer__text">Questions? Call <a>000-800-919-1694</a></p>
      <div className="signup__footer__row">
      <div className="footer__col">
         <a href="" className='signup__footer__link'>FAQ</a>

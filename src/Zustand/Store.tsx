@@ -1,3 +1,5 @@
+// Store For the App
+
 import { create } from 'zustand';
 
  export const initialdata = { id: 0, title: '', year: '', runtime: '', genres: '', director: '', actors: '', plot: '', posterUrl: '', vedio: '' }

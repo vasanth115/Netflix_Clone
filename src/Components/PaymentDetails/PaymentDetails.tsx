@@ -1,3 +1,5 @@
+//  Payment Selection Depit or Credit Card ( OR ) UPI
+
 import './paymentDetails.scss'
 import { Link } from 'react-router-dom'
 import lock from '../../../public/images/misc/lock-iamge.png'

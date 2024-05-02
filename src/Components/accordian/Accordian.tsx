@@ -1,3 +1,5 @@
+// Accordian of the Home Page
+
 import React from 'react';
 import './accordian.scss';
 import Data from '../../JSON/faqs.json';

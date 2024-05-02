@@ -1,3 +1,5 @@
+// Sign Up Form Component
+
 import React, { useState } from 'react';
 import logo from '../../../public/images/icons/logo.svg';
 import { Link } from 'react-router-dom';

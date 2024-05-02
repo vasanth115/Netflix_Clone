@@ -1,3 +1,5 @@
+// Search Page Component
+
 import usePosterApi from "../../CustomeHooks/usePosterApi";
 import { useFormStore } from "../../Zustand/Store";
 import './SearchContent.scss'

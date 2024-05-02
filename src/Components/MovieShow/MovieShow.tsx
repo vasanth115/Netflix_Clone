@@ -1,5 +1,7 @@
+// Landing Page Movie List Component
+
 import { useState, useEffect, useRef } from "react";
-import './Movies.scss'; // Import your SCSS file
+import './Movies.scss'; 
 import { useFormStore } from "../../Zustand/Store";
 import usePosterApi from "../../CustomeHooks/usePosterApi";
 import { useNavigate } from "react-router-dom";

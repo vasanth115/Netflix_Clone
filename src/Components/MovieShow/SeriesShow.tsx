@@ -1,3 +1,6 @@
+// Landing Page Series List Component
+
+
 import { useState, useEffect, useRef } from "react";
 import './Series.scss';
 import { useFormStore } from "../../Zustand/Store";

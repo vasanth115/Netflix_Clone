@@ -1,3 +1,5 @@
+// API Call for Series list
+
 import { useEffect , useState } from "react";
 
 const useSeriesApi = () => {

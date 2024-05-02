@@ -1,3 +1,5 @@
+// Form of the Home Page
+
 import React from 'react';
 import './Form.scss';
 import arrow from '../../../public/images/icons/chevron-right.png';

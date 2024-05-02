@@ -1,3 +1,5 @@
+// Description for Series Component
+
 import './SeriesDescription.scss'
 
 
