@@ -26,9 +26,12 @@ const SignUpForm = () => {
       setIsValidPassword(isValid);
       Navigate('/step2')
     }
-    else {
+    else if(password.length === 0) {
       alert("Must Fill the Password")
       setIsValidPassword(isValid);
+    }
+    else {
+      alert("Password must have 6 Characters")
     }
 
   };
@@ -66,7 +69,7 @@ const SignUpForm = () => {
             value={password}
             onChange={handlePasswordChange}
           />
-          {!isValidPassword && <p className="register__error">Password must be at least 6 characters long</p>}
+          {!isValidPassword && <p className="register__error">Cheak Your Password </p>}
           <div className="password_fill">
             <a className='register__forgetpassword' onClick={() => PasswordGenerator(10)}>Suggest some password</a>
             <div className="show__hide__password">

@@ -10,7 +10,7 @@ const UPIPay: React.FC = () => {
   const [error, setError] = useState("");
   const [number, setNumber] = useState("");
   const [value, setValue] = useState(false);
-  const [timeLeft, setTimeLeft] = useState<number>(120); // 2 minutes = 120 seconds
+  const [timeLeft, setTimeLeft] = useState<number>(60); 
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -59,7 +59,7 @@ const UPIPay: React.FC = () => {
           alert("An error occurred. Please try again later."); // Provide user-friendly error message
         });
     }
-  }, [timeLeft, email, password, number, history]);
+  }, [timeLeft, email, password, number]);
 
   return (
     <div className="upipay">
